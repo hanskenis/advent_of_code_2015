@@ -18,15 +18,13 @@ fun part_1(input: String): Int {
 
 fun part_2(input: String): Int {
     var floor = 0;
-    var index = 1;
+    var index = 0;
 
-    input.forEach{
-        floor += move(it);
-        if (floor == -1){
-            return index;
-        }
-        index++;
+    while (floor != -1){
+        floor += move(input[index])
+        index++
     }
+
     return index;
 }
 
@@ -35,5 +33,4 @@ fun main() {
 
     println("Part 1: ${part_1(input)}")
     println("Part 2: ${part_2(input)}")
-
 }
