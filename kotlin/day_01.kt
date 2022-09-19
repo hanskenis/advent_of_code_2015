@@ -1,5 +1,5 @@
 fun move(input: Char): Int {
-    when(input) {
+    when (input) {
         '(' -> return 1
         ')' -> return -1
     }
@@ -7,25 +7,23 @@ fun move(input: Char): Int {
 }
 
 fun part_1(input: String): Int {
-    var floor = 0;
+    var floor = 0
 
-    input.forEach {
-       floor += move(it);
-    }
+    input.forEach { floor += move(it) }
 
     return floor
 }
 
 fun part_2(input: String): Int {
-    var floor = 0;
-    var index = 0;
+    var floor = 0
+    var index = 0
 
-    while (floor != -1){
+    while (floor != -1) {
         floor += move(input[index])
         index++
     }
 
-    return index;
+    return index
 }
 
 fun main() {
