@@ -1,3 +1,5 @@
+package day_02
+
 import kotlin.math.*
 
 fun slack_paper(l: Int, w: Int, h: Int): Int {

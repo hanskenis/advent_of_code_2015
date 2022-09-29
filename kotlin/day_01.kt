@@ -1,3 +1,5 @@
+package day_01
+
 fun move(input: Char): Int {
     when (input) {
         '(' -> return 1
@@ -27,7 +29,7 @@ fun part_2(input: String): Int {
 }
 
 fun main() {
-    var input = readln()
+    var input = readLine()!!
 
     println("Part 1: ${part_1(input)}")
     println("Part 2: ${part_2(input)}")
